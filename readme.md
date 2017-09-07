@@ -44,7 +44,7 @@ The following endpoint returns the band data
     "spotify": "https://open.spotify.com/artist/51Blml2LZPmy7TTiAg47vQ",
     "youtube": "UCpd21W3qWyzIl8-PXvyDA2g",
     "iheartradio": null,
-  }
+  },
   "website": "http://www.u2.com/news/title/the-joshua-tree-at-30",
   "about": "'I wanna feel sunlight on my face...' Marking 30 years of The Joshua Tree in stadiums across North America & Europe. Dates & Tickets - http://www.u2.com\n\n",
   "bio": null,
