@@ -7,28 +7,28 @@ The following endpoint returns the band data
 `GET` `https://api.muzooka.com/bands/:facebookUsername`
 
 ### Response Structure
-`name`: band name
-`city`: city the band resides in
-`province`: province or state the band resides in
-`country`: country the band resides in
-`social` : collection of social media information
- - `twitter`: Twitter username for the band
- - `facebook`: Facebook username for the band
- - `instagram`: Instagram username for the band
- - `spotify`: spotify username for the band
- - `youtube`: Youtube Channel for the band
- - `iHeartRadio`: iHeartRadio profile for the band
-`website`: Bands website
-`about`: About the band
-`bio`: Bio information for the band
-`description`: Description of the band
-`links`: Collection of endpoints
- - `videos`: Endpoint for bands videos
- - `images`: Endpoint for images the band have uploaded
- - `performances`: Endpoint for upcoming performances for the band
+* `name`: band name
+* `city`: city the band resides in
+* `province`: province or state the band resides in
+* `country`: country the band resides in
+* `social` : collection of social media information
+* - `twitter`: Twitter username for the band
+* - `facebook`: Facebook username for the band
+* - `instagram`: Instagram username for the band
+* - `spotify`: spotify username for the band
+* - `youtube`: Youtube Channel for the band
+* - `iHeartRadio`: iHeartRadio profile for the band
+* `website`: Bands website
+* `about`: About the band
+* `bio`: Bio information for the band
+* `description`: Description of the band
+* `links`: Collection of endpoints
+* - `videos`: Endpoint for bands videos
+* - `images`: Endpoint for images the band have uploaded
+*  - `performances`: Endpoint for upcoming performances for the band
 
 ### Example Response
-```
+```json
 {
   "subdomain": "u2",
   "facebookUsername": "u2",
