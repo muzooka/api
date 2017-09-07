@@ -2,30 +2,30 @@ First contact us to get an authentication token to access the api
 
 Once the authentication token is recieved it must be sent in an http header called `muzooka-auth-token` for all requests to the API
 
-### Band Endpoint
-The following endpoint returns the band data
-`GET` `https://api.muzooka.com/bands/:facebookUsername`
+### Artist Endpoint
+The following endpoint returns the artists data
+`GET` `https://api.muzooka.com/artists/:facebookUsername`
 
 ### Response Structure
-* `name`: band name
-* `city`: city the band resides in
-* `province`: province or state the band resides in
-* `country`: country the band resides in
+* `name`: artist name
+* `city`: city the artist resides in
+* `province`: province or state the artist resides in
+* `country`: country the artist resides in
 * `social` : collection of social media information
-* - `twitter`: Twitter username for the band
-* - `facebook`: Facebook username for the band
-* - `instagram`: Instagram username for the band
-* - `spotify`: spotify username for the band
-* - `youtube`: Youtube Channel for the band
-* - `iHeartRadio`: iHeartRadio profile for the band
-* `website`: Bands website
-* `about`: About the band
-* `bio`: Bio information for the band
-* `description`: Description of the band
+* - `twitter`: Twitter username for the artist
+* - `facebook`: Facebook username for the artist
+* - `instagram`: Instagram username for the artist
+* - `spotify`: spotify username for the artist
+* - `youtube`: Youtube Channel for the artist
+* - `iHeartRadio`: iHeartRadio profile for the artist
+* `website`: artist website
+* `about`: About the artist
+* `bio`: Bio information for the artist
+* `description`: Description of the artist
 * `links`: Collection of endpoints
-* - `videos`: Endpoint for bands videos
-* - `images`: Endpoint for images the band have uploaded
-*  - `performances`: Endpoint for upcoming performances for the band
+* - `videos`: Endpoint for artist videos
+* - `images`: Endpoint for images the artist have uploaded
+*  - `performances`: Endpoint for upcoming performances for the artist
 
 ### Example Response
 ```json
@@ -51,9 +51,9 @@ The following endpoint returns the band data
   "description": "'Only to be with you...' The Joshua Tree at Thirty. http://www.u2.com/news/title/the-joshua-tree-at-30",
   "generalInfo": null,
   "links": {
-    "video": "/bands/u2/videos",
-    "images": "/bands/u2/images",
-    "performances": "/bands/u2/performances"
+    "video": "/artists/u2/videos",
+    "images": "/artists/u2/images",
+    "performances": "/artists/u2/performances"
   }
 }
 ```
@@ -65,7 +65,7 @@ The following example uses PHP and the library [Httpful](http://phphttpclient.co
 <?php
 include('./httpful.phar');
 
-$response = \Httpful\Request::get('https://api.muzooka.com/bands/U2')
+$response = \Httpful\Request::get('https://api.muzooka.com/artists/U2')
     ->addHeader('muzooka-auth-token', 'EXTSyU^BAxK#ukJ$@aS5mj3z')
     ->expectsJson()
     ->send();
@@ -74,11 +74,11 @@ echo($response->body->name); //U2
 ?>
 ```
 
-### Band Video Endpoint
+### Artist Video Endpoint
 
-The following endpoint returns the videos for the band
+The following endpoint returns the videos for the artist
 
-`GET` `https://api.muzooka.com/bands/:facebookUsername/videos`
+`GET` `https://api.muzooka.com/artists/:facebookUsername/videos`
 
 ### Response Structure
 Array of: 
@@ -99,16 +99,18 @@ Array of:
   }
 ]
 ```
-### Band Images Endpoint
+### Artist Images Endpoint
 
-The following endpoint returns the images for the band
+The following endpoint returns the images for the artist
 
-`GET` `https://api.muzooka.com/bands/:facebookUsername/images`
+`GET` `https://api.muzooka.com/artists/:facebookUsername/images`
 
 ### Response Structure
 Array of: 
- - `name`: video name
- - `url`: The url of the video
+ - `smallUrl`: the url for the small image
+ - `mediumUrl`: The url for the large image
+ - `largeUrl`: the url for the large image
+ - `original`: the url for the original image
 
 ### Example Response
 ```json
