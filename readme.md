@@ -1,12 +1,16 @@
+# Muzooka API
+
 First contact us to get an authentication token to access the api
 
 Once the authentication token is recieved it must be sent in an http header called `muzooka-auth-token` for all requests to the API
 
-### Artist Endpoint
+## Artist Endpoint
+
 The following endpoint returns the artists data
 `GET` `https://api.muzooka.com/artists/:facebookUsername`
 
 ### Response Structure
+
 * `name`: artist name
 * `city`: city the artist resides in
 * `province`: province or state the artist resides in
@@ -17,7 +21,7 @@ The following endpoint returns the artists data
 * - `instagram`: Instagram username for the artist
 * - `spotify`: spotify username for the artist
 * - `youtube`: Youtube Channel for the artist
-* - `iHeartRadio`: iHeartRadio profile for the artist
+* - `iheartradio`: iHeartRadio profile for the artist
 * `website`: artist website
 * `about`: About the artist
 * `bio`: Bio information for the artist
@@ -25,7 +29,8 @@ The following endpoint returns the artists data
 * `links`: Collection of endpoints
 * - `videos`: Endpoint for artist videos
 * - `images`: Endpoint for images the artist have uploaded
-*  - `performances`: Endpoint for upcoming performances for the artist
+* - `performances`: Endpoint for upcoming performances for the artist (Not Implemented)
+* - `muzookaUrl`: The Artist page on Muzooka.com
 
 ### Example Response
 ```json
@@ -51,9 +56,10 @@ The following endpoint returns the artists data
   "description": "'Only to be with you...' The Joshua Tree at Thirty. http://www.u2.com/news/title/the-joshua-tree-at-30",
   "generalInfo": null,
   "links": {
-    "video": "/artists/u2/videos",
-    "images": "/artists/u2/images",
-    "performances": "/artists/u2/performances"
+    "video": "https://api.muzooka.com/artists/u2/videos",
+    "images": "https://api.muzooka.com/artists/u2/images",
+    "performances": "https://api.muzooka.com/artists/u2/performances", 
+    "muzookaUrl": "https://www.muzooka.com/u2"
   }
 }
 ```
@@ -74,7 +80,7 @@ echo($response->body->name); //U2
 ?>
 ```
 
-### Artist Video Endpoint
+## Artist Video Endpoint
 
 The following endpoint returns the videos for the artist
 
