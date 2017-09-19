@@ -36,29 +36,27 @@ The following endpoint returns the artists data
 ### Example Response
 ```json
 {
-  "subdomain": "u2",
   "name": "U2",
   "city": "Dublin, Ireland",
   "province": null,
   "country": null,
-  "website": "http://www.u2.com/news/title/the-joshua-tree-at-30",
-  "about": "'I wanna feel sunlight on my face...' Marking 30 years of The Joshua Tree in stadiums across North America & Europe. Dates & Tickets - http://www.u2.com\n\n",
+  "website": "http://www.u2.com/",
+  "about": "‘In the darkness where we learn to see…’\nhttp://www.u2.com/news/title/the-blackout\n\n",
   "bio": null,
-  "description": "'Only to be with you...' The Joshua Tree at Thirty. http://www.u2.com/news/title/the-joshua-tree-at-30",
+  "description": "You're The Best Thing About Me, the first single from the new album Songs of Experience https://u2.lnk.to/BestThingFP",
   "generalInfo": null,
   "social": {
-    "twitter": "U2",
-    "mixcloud": null,
-    "instagram": "U2",
-    "soundcloud": "",
+    "twitter": "https://twitter.com/U2",
+    "facebook": "https://www.facebook.com/u2",
+    "instagram": "https://www.instagram.com/U2",
     "spotify": "https://open.spotify.com/artist/51Blml2LZPmy7TTiAg47vQ",
-    "youtube": "UCpd21W3qWyzIl8-PXvyDA2g",
-    "iheartradio": null,
+    "youtube": "https://www.youtube.com/channel/UCpd21W3qWyzIl8-PXvyDA2g",
+    "iheartradio": "https://www.iheart.com/artist/u2-970/"
   },
   "links": {
-    "video": "https://api.muzooka.com/artists/u2/videos",
-    "images": "https://api.muzooka.com/artists/u2/images",
-    "performances": "https://api.muzooka.com/artists/u2/performances", 
+    "video": "http://api.muzooka.com/artists/u2/videos",
+    "images": "http://api.muzooka.com/artists/u2/images",
+    "performances": "http://api.muzooka.com/artists/u2/performances",
     "muzookaUrl": "https://www.muzooka.com/u2"
   }
 }
