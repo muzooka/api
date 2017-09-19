@@ -37,7 +37,6 @@ The following endpoint returns the artists data
 ```json
 {
   "subdomain": "u2",
-  "facebookUsername": "u2",
   "name": "U2",
   "city": "Dublin, Ireland",
   "province": null,
