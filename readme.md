@@ -15,17 +15,18 @@ The following endpoint returns the artists data
 * `city`: city the artist resides in
 * `province`: province or state the artist resides in
 * `country`: country the artist resides in
-* `social` : collection of social media information
-* - `twitter`: Twitter username for the artist
-* - `facebook`: Facebook username for the artist
-* - `instagram`: Instagram username for the artist
-* - `spotify`: spotify username for the artist
-* - `youtube`: Youtube Channel for the artist
-* - `iheartradio`: iHeartRadio profile for the artist
 * `website`: artist website
 * `about`: About the artist
 * `bio`: Bio information for the artist
 * `description`: Description of the artist
+* `generalInfo`: General information on the artist
+* `social` : collection of social media information
+* - `twitter`: Twitter url for the artist
+* - `facebook`: Facebook url for the artist
+* - `instagram`: Instagram url for the artist
+* - `spotify`: spotify url for the artist
+* - `youtube`: Youtube Channel url for the artist
+* - `iheartradio`: iHeartRadio url for the artist
 * `links`: Collection of endpoints
 * - `videos`: Endpoint for artist videos
 * - `images`: Endpoint for images the artist have uploaded
@@ -41,6 +42,11 @@ The following endpoint returns the artists data
   "city": "Dublin, Ireland",
   "province": null,
   "country": null,
+  "website": "http://www.u2.com/news/title/the-joshua-tree-at-30",
+  "about": "'I wanna feel sunlight on my face...' Marking 30 years of The Joshua Tree in stadiums across North America & Europe. Dates & Tickets - http://www.u2.com\n\n",
+  "bio": null,
+  "description": "'Only to be with you...' The Joshua Tree at Thirty. http://www.u2.com/news/title/the-joshua-tree-at-30",
+  "generalInfo": null,
   "social": {
     "twitter": "U2",
     "mixcloud": null,
@@ -50,11 +56,6 @@ The following endpoint returns the artists data
     "youtube": "UCpd21W3qWyzIl8-PXvyDA2g",
     "iheartradio": null,
   },
-  "website": "http://www.u2.com/news/title/the-joshua-tree-at-30",
-  "about": "'I wanna feel sunlight on my face...' Marking 30 years of The Joshua Tree in stadiums across North America & Europe. Dates & Tickets - http://www.u2.com\n\n",
-  "bio": null,
-  "description": "'Only to be with you...' The Joshua Tree at Thirty. http://www.u2.com/news/title/the-joshua-tree-at-30",
-  "generalInfo": null,
   "links": {
     "video": "https://api.muzooka.com/artists/u2/videos",
     "images": "https://api.muzooka.com/artists/u2/images",
