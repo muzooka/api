@@ -30,7 +30,10 @@ The following endpoint returns the artists data
 * - `spotify`: spotify url for the artist
 * - `youtube`: Youtube Channel url for the artist
 * - `iheartradio`: iHeartRadio url for the artist
-* `socialLinks`: An array of social media links
+* - `bandsintown`: Bands In Town url for the artist
+* - `SoundCloud`: Soundcloud url for the artist
+* - `Mixcloud`: Mixcloud url for the artist
+* `socialLinks`: An array of social media links, only existing social links for the given artist will be included
 * - `type`: Type of social media link (ex Twitter)
 * - `id`: Social media id, username or profile
 * - `url`: Direct link to social media account
