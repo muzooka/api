@@ -31,8 +31,8 @@ The following endpoint returns the artists data
 * - `youtube`: Youtube Channel url for the artist
 * - `iheartradio`: iHeartRadio url for the artist
 * - `bandsintown`: Bands In Town url for the artist
-* - `SoundCloud`: Soundcloud url for the artist
-* - `Mixcloud`: Mixcloud url for the artist
+* - `soundcloud`: Soundcloud url for the artist
+* - `mixcloudhttps://github.com/muzooka/api/`: Mixcloud url for the artist
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
 * - `type`: Type of social media link (ex Twitter)
 * - `id`: Social media id, username or profile
@@ -80,6 +80,18 @@ The following endpoint returns the artists data
         "iheartradio": {
             "url": "https://www.iheart.com/artist/",
             "profile": ""
+        },
+        "bandsintown": {
+            "url": "https://www.bandsintown.com/U2",
+            "username": "U2"
+        },
+        "mixcloud": {
+            "url": "https://www.mixcloud.com/",
+            "username": ""
+        },
+        "soundcloud": {
+            "url": "https://www.soundcloud.com/",
+            "username": ""
         }
     },
     "sociaLinks": [
@@ -107,6 +119,11 @@ The following endpoint returns the artists data
             "type": "youtube",
             "id": "UCpd21W3qWyzIl8-PXvyDA2g",
             "url": "https://www.youtube.com/channel/UCpd21W3qWyzIl8-PXvyDA2g"
+        },
+        {
+            "type": "bandsintown",
+            "id": "U2",
+            "url": "https://www.bandsintown.com/U2"
         }
     ],
     "links": {
