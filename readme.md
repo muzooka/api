@@ -32,7 +32,7 @@ The following endpoint returns the artists data
 * - `iheartradio`: iHeartRadio url for the artist
 * - `bandsintown`: Bands In Town url for the artist
 * - `soundcloud`: Soundcloud url for the artist
-* - `mixcloudhttps://github.com/muzooka/api/`: Mixcloud url for the artist
+* - `mixcloud`: Mixcloud url for the artist
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
 * - `type`: Type of social media link (ex Twitter)
 * - `id`: Social media id, username or profile
