@@ -94,7 +94,7 @@ The following endpoint returns the artists data
             "username": ""
         }
     },
-    "sociaLinks": [
+    "socialLinks": [
         {
             "type": "twitter",
             "id": "U2",
