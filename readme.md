@@ -161,6 +161,7 @@ Array of:
  - `id`: Muzooka video id
  - `name`: Video name
  - `url`: The url of the video
+ - `isFeatured`: Is set to `true` for a featured video, otherwise if `false`
  - `videoId`: The YouTube id of the video
  - `embed`: The embed url of the video
 ### Example Response
@@ -170,6 +171,7 @@ Array of:
     "id": "123",
     "name": "U2 - Song For Someone (Directed by Matt Mahurin)",
     "url" "https://youtu.be/RFjcd_d2PhY",
+    "isFeatured": false,
     "videoId": "RFjcd_d2PhY",
     "embed": "https://www.youtube.com/embed/RFjcd_d2PhY"
   },
@@ -177,6 +179,7 @@ Array of:
     "id": "456",
     "name": "U2 - I Still Haven't Found What I'm Looking For",
     "url": "https://youtu.be/e3-5YC_oHjE",
+    "isFeatured": true,
     "videoId": "e3-5YC_oHjE",
     "embed": "https://www.youtube.com/embed/e3-5YC_oHjE"
   }
