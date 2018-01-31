@@ -23,7 +23,7 @@ The following endpoint returns the artists data
 * - `mediumUrl`: Medium version of the Banner
 * - `largeUrl`: Large version of the Banner
 * - `original`: Original version of the Banner
-<span style="color:red;">* `social` : collection of social media information _Deprecated_</span>
+<span style=color:red;>* `social` : collection of social media information _Deprecated_</span>
 * - `twitter`: Twitter url for the artist
 * - `facebook`: Facebook url for the artist
 * - `instagram`: Instagram url for the artist
