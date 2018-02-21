@@ -1,8 +1,8 @@
 # Muzooka API
 
-First contact us to get an authentication token to access the api
+First contact us to get an authentication token to access the API.
 
-Once the authentication token is recieved it must be sent in an http header called `muzooka-auth-token` for all requests to the API
+Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
 
 ## Artist Endpoint
 
@@ -23,16 +23,6 @@ The following endpoint returns the artists data
 * - `mediumUrl`: Medium version of the Banner
 * - `largeUrl`: Large version of the Banner
 * - `original`: Original version of the Banner
-* `social` : collection of social media information _Deprecated_ ❌
-* - `twitter`: Twitter url for the artist
-* - `facebook`: Facebook url for the artist
-* - `instagram`: Instagram url for the artist
-* - `spotify`: spotify url for the artist
-* - `youtube`: Youtube Channel url for the artist
-* - `iheartradio`: iHeartRadio url for the artist
-* - `bandsintown`: Bands In Town url for the artist
-* - `soundcloud`: Soundcloud url for the artist
-* - `mixcloud`: Mixcloud url for the artist
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
 * - `type`: Type of social media link (ex Twitter)
 * - `id`: Social media id, username or profile
@@ -58,41 +48,6 @@ The following endpoint returns the artists data
         "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/medium.jpg",
         "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/large.jpg",
         "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/original.jpg"
-    },
-    "social": {
-        "twitter": {
-            "url": "https://twitter.com/U2",
-            "username": "U2"
-        },
-        "facebook": {
-            "url": "https://www.facebook.com/u2",
-            "username": "u2"
-        },
-        "instagram": {
-            "url": "https://www.instagram.com/U2",
-            "username": "U2"
-        },
-        "spotify": "https://open.spotify.com/artist/51Blml2LZPmy7TTiAg47vQ",
-        "youtube": {
-            "url": "https://www.youtube.com/channel/UCpd21W3qWyzIl8-PXvyDA2g",
-            "channel": "UCpd21W3qWyzIl8-PXvyDA2g"
-        },
-        "iheartradio": {
-            "url": "https://www.iheart.com/artist/",
-            "profile": ""
-        },
-        "bandsintown": {
-            "url": "https://www.bandsintown.com/U2",
-            "username": "U2"
-        },
-        "mixcloud": {
-            "url": "https://www.mixcloud.com/",
-            "username": ""
-        },
-        "soundcloud": {
-            "url": "https://www.soundcloud.com/",
-            "username": ""
-        }
     },
     "socialLinks": [
         {
@@ -127,13 +82,49 @@ The following endpoint returns the artists data
         }
     ],
     "links": {
-        "video": "https://api-qc.muzooka.com/artists/u2/videos",
-        "images": "https://api-qc.muzooka.com/artists/u2/images",
+        "video": "https://api.muzooka.com/artists/u2/videos",
+        "images": "https://api.muzooka.com/artists/u2/images",
         "muzookaUrl": "https://qc.muzooka.com/u2"
     }
 }
 ```
-### Example
+
+### Social Links
+
+Currently, `socialLinks` field can have following types:
+
+    - twitter
+    - facebook
+    - instagram
+    - spotify
+    - youtube
+    - bandsintown
+    - soundcloud
+    - iheartradio
+    - mixcloud
+
+More types can be added in the future.
+
+
+### Example – NODE.JS
+
+```js
+const axios = require('axios');
+
+const muzookaAuthToken = 'EXTSyU^BAxK#ukJ$@aS5mj3z';
+const config = {
+  baseURL: 'https://api.muzooka.com/',
+  headers: {
+    'X-muzooka-auth-token': muzookaAuthToken,
+  },
+};
+
+const getArtist = facebookUsername =>
+  axios.get(`artists/${facebookUsername}`, config)
+    .then(({ data }) => data);
+```
+
+### Example – PHP
 
 The following example uses PHP and the library [Httpful](http://phphttpclient.com/) installed with [Phar](http://php.net/manual/en/book.phar.php)
 
@@ -170,7 +161,7 @@ Array of:
   {
     "id": "123",
     "name": "U2 - Song For Someone (Directed by Matt Mahurin)",
-    "url" "https://youtu.be/RFjcd_d2PhY",
+    "url": "https://youtu.be/RFjcd_d2PhY",
     "isFeatured": false,
     "videoId": "RFjcd_d2PhY",
     "embed": "https://www.youtube.com/embed/RFjcd_d2PhY"
