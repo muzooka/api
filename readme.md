@@ -23,6 +23,11 @@ The following endpoint returns the artists data
 * - `mediumUrl`: Medium version of the Banner
 * - `largeUrl`: Large version of the Banner
 * - `original`: Original version of the Banner
+* `profile`: Profile image of the artist
+* - `smallUrl`: Small version of Profile image
+* - `mediumUrl`: Medium version of Profile image
+* - `largeUrl`: Large version of Profile image
+* - `original`: Original version of Profile image
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
 * - `type`: Type of social media link (ex Twitter)
 * - `id`: Social media id, username or profile
@@ -48,6 +53,12 @@ The following endpoint returns the artists data
         "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/medium.jpg",
         "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/large.jpg",
         "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/original.jpg"
+    },
+    "profile": {
+        "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/55072/small.jpg",
+        "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/55072/medium.jpg",
+        "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/55072/large.jpg",
+        "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/55072/original.jpg"
     },
     "socialLinks": [
         {
