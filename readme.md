@@ -2,7 +2,7 @@
 
 First contact us to get an authentication token to access the API.
 
-Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
+Once the authentication token is recieved it must be sent in an http header called `muzooka-auth-token` for all requests to the API
 
 ## Artist Endpoint
 
@@ -126,7 +126,7 @@ const muzookaAuthToken = 'EXTSyU^BAxK#ukJ$@aS5mj3z';
 const config = {
   baseURL: 'https://api.muzooka.com/',
   headers: {
-    'X-muzooka-auth-token': muzookaAuthToken,
+    'muzooka-auth-token': muzookaAuthToken,
   },
 };
 
