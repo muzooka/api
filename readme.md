@@ -1,6 +1,6 @@
 # Muzooka API
 
-First contact us to get an authentication token to access the API.
+First contact us to get an authentication token to access the API. Email us at api@muzooka.com to request a token.
 
 Once the authentication token is recieved it must be sent in an http header called `muzooka-auth-token` for all requests to the API
 
