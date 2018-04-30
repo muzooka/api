@@ -2,7 +2,98 @@
 
 First contact us to get an authentication token to access the API. Email us at api@muzooka.com to request a token.
 
-Once the authentication token is recieved it must be sent in an http header called `muzooka-auth-token` for all requests to the API
+Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
+
+## Artist Lookup Endpoint
+
+To lookup an artist, use their name or a portion of it for a fuzzy match. Use following endpoint:
+`GET` `https://api.muzooka.com/artists`
+
+Supported query parameters are:
+
+* `name`: Will perform a fuzzy match on the part of the name.
+* `nameStartsWith`: Will look for artists who's name starts with a given term.
+* `nameMatch`: Will perform an exact match on the artist name.
+* `limit`: Will paginate the result in pages of given size. Maximum page limit is 100, default limit is 25.
+* `offset`: To select certain page of results, set an offset. This will skip given number of records from the top of the list.
+
+Note that ony one name matching parameter can be used at the time. Having a name matching parameter is a requirement to access this endpoint.
+
+Result would contain two top-level fileds: `data` and `pages`. `data` is an array of results, `pages` is the information about pagination.
+
+### Example Response
+```json
+{
+    "data": [
+        {
+            "name": "Paul McCartney",
+            "banner": {
+                "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/124081/small.jpg",
+                "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/124081/medium.jpg",
+                "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/124081/large.jpg",
+                "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/124081/original.jpg"
+            },
+            "profile": {
+                "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/124082/small.jpg",
+                "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/124082/medium.jpg",
+                "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/124082/large.jpg",
+                "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/124082/original.jpg"
+            },
+            "facebookUsername": "PaulMcCartney",
+            "city": "Liverpool",
+            "province": null,
+            "website": "http://www.PaulMcCartney.com",
+            "about": "Page administered by [MPL] ",
+            "description": "Paul McCartney's official Facebook page. ",
+            "social": {
+                "twitter": {
+                    "url": "https://twitter.com/PaulMcCartney",
+                    "username": "PaulMcCartney"
+                },
+                "facebook": {
+                    "url": "https://www.facebook.com/PaulMcCartney",
+                    "username": "PaulMcCartney"
+                },
+                "instagram": {},
+                "youtube": {
+                    "url": "https://www.youtube.com/channel/PAULMCCARTNEY",
+                    "channel": "PAULMCCARTNEY"
+                },
+                "iheartradio": {},
+                "bandsintown": {},
+                "mixcloud": {},
+                "soundcloud": {}
+            },
+            "socialLinks": [
+                {
+                    "type": "twitter",
+                    "id": "PaulMcCartney",
+                    "url": "https://twitter.com/PaulMcCartney"
+                },
+                {
+                    "type": "facebook",
+                    "id": "PaulMcCartney",
+                    "url": "https://www.facebook.com/PaulMcCartney"
+                },
+                {
+                    "type": "youtube",
+                    "id": "PAULMCCARTNEY",
+                    "url": "https://www.youtube.com/channel/PAULMCCARTNEY"
+                }
+            ],
+            "links": {
+                "video": "https://api.muzooka.com/artists/PaulMcCartney/videos",
+                "images": "https://api.muzooka.com/artists/PaulMcCartney/images",
+                "muzookaUrl": "https://muzooka.com/PaulMcCartney"
+            }
+        }
+    ],
+    "pages": {
+        "total": 1,
+        "totalPages": 1
+    }
+}
+```
 
 ## Artist Endpoint
 
@@ -18,6 +109,7 @@ The following endpoint returns the artists data
 * `website`: Artist website
 * `about`: About the artist
 * `description`: Description of the artist
+* `facebookUsername`: Artist's username on facebook. If artist does not have a username on facebook, artist's numeric facebook ID would be provided.
 * `banner`: Banner image of the artist
 * - `smallUrl`: Small version of the Banner
 * - `mediumUrl`: Medium version of the Banner
@@ -60,6 +152,7 @@ The following endpoint returns the artists data
         "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/55072/large.jpg",
         "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/55072/original.jpg"
     },
+    "facebookUsername": "u2",
     "socialLinks": [
         {
             "type": "twitter",
@@ -95,7 +188,7 @@ The following endpoint returns the artists data
     "links": {
         "video": "https://api.muzooka.com/artists/u2/videos",
         "images": "https://api.muzooka.com/artists/u2/images",
-        "muzookaUrl": "https://qc.muzooka.com/u2"
+        "muzookaUrl": "https://muzooka.com/u2"
     }
 }
 ```
@@ -113,6 +206,12 @@ Currently, `socialLinks` field can have following types:
     - soundcloud
     - iheartradio
     - mixcloud
+    - homepage
+    - ticketmaster
+    - lastfm
+    - itunes
+    - wiki
+    - vevo
 
 More types can be added in the future.
 
@@ -126,7 +225,7 @@ const muzookaAuthToken = 'EXTSyU^BAxK#ukJ$@aS5mj3z';
 const config = {
   baseURL: 'https://api.muzooka.com/',
   headers: {
-    'muzooka-auth-token': muzookaAuthToken,
+    'X-muzooka-auth-token': muzookaAuthToken,
   },
 };
 
@@ -144,7 +243,7 @@ The following example uses PHP and the library [Httpful](http://phphttpclient.co
 include('./httpful.phar');
 
 $response = \Httpful\Request::get('https://api.muzooka.com/artists/U2')
-    ->addHeader('muzooka-auth-token', 'EXTSyU^BAxK#ukJ$@aS5mj3z')
+    ->addHeader('X-muzooka-auth-token', 'EXTSyU^BAxK#ukJ$@aS5mj3z')
     ->expectsJson()
     ->send();
 
