@@ -4,6 +4,13 @@ First contact us to get an authentication token to access the API. Email us at a
 
 Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
 
+### Quick Jump To:
+* [Artist Lookup Endpoint](#artist-lookup-endpoint)
+* [Artist Endpoint](#artist-endpoint)
+* [Artist Video Endpoint](#artist-video-endpoint)
+* [Artist Images Endpoint](#artist-images-endpoint)
+* [Events Endpoint](#events-endpoint)
+
 ## Artist Lookup Endpoint
 
 To lookup an artist, use their name or a portion of it for a fuzzy match. Use following endpoint:
@@ -286,7 +293,7 @@ Array of:
   }
 ]
 ```
-### Artist Images Endpoint
+## Artist Images Endpoint
 
 The following endpoint returns the images for the artist
 
