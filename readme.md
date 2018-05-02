@@ -319,3 +319,77 @@ Array of:
   }
 ]
 ```
+
+## Events Endpoint
+
+To access Events data, use following endpoint:
+
+`GET` `https://api.muzooka.com/events`
+
+Supported query parameters are:
+
+* `limit`: Will paginate the result in pages of given size. Maximum page limit is 100, default limit is 25.
+* `offset`: To select certain page of results, set an offset. This will skip given number of records from the top of the list.
+* `startDate`: Will return only events that happened after this date.
+* `endDate`: Will return only events that happened before this date. Defaults to the time of the request (now).
+* `facebookUsername`: artist's Facebook username. When provided, only events related to this artist will be returned.
+
+### Example Response
+
+```json
+{
+    "data": [
+        {
+            "Headliner": ... ,
+            "SupportingBands": [ ... ],
+            "BannerImage": {
+                "id": "123",
+                "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/small.jpg",
+                "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/medium.jpg",
+                "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/large.jpg",
+                "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/original.jpg"
+            },
+            "currency": "$",
+            "name": "The Sadies (with special guests Beams)",
+            "date": "2018-05-12",
+            "ages": "19+",
+            "doorsOpenTime": "19:30:00",
+            "showStartTime": "20:00:00",
+            "showStartDateTime": "2018-05-12T23:30:00.000Z",
+            "timezone": "America/Toronto",
+            "ticketUrl": "https://www.ticketscene.ca/events/20725/",
+            "ticketPrice": 45,
+            "ticketed": true,
+            "Bands": [
+                ...
+            ],
+            "Location": {
+                "name": "Heartwood Concert Hall",
+                "url": "http://heartwoodhall.ca",
+                "capacity": null,
+                "address": "939 2nd Ave E",
+                "city": "Owen Sound",
+                "province": "ON",
+                "country": "Canada",
+                "postalCode": "N4K 2H5",
+                "lat": 44.566570,
+                "lng": -80.94278
+            },
+            "BannerImages": [
+                {
+                    "id": "123",
+                    "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/small.jpg",
+                    "mediumUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/medium.jpg",
+                    "largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/large.jpg",
+                    "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/11057777/original.jpg",
+                }
+            ]
+        },
+        ...
+    ],
+    "pages": {
+        "total": 389994,
+        "totalPages": 39000
+    }
+}
+```
