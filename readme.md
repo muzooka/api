@@ -299,6 +299,15 @@ The following endpoint returns the images for the artist
 
 `GET` `https://api.muzooka.com/artists/:facebookUsername/images`
 
+Muzooka API provides 3 fixed-width resized version of the original image, along with the original image. Muzooka images are not crops, just resizes – so only the width is of knows size and aspect ratio is preserved of the original image. This applied to all images across the API, not just to this endpoint.
+
+Common sizes used throughout the API are `small`, `medium`, `large` and `original`. Here is a size chart:
+
+- `small`: 320 px wide.
+- `medium`: 768 px wide.
+- `large`: 1200 px wide.
+- `original`: original image as initally uploaded.
+
 ### Response Structure
 Array of: 
  - `id`: Muzooka image Id
