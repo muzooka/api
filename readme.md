@@ -1,6 +1,6 @@
 # Muzooka API
 
-First contact us to get an authentication token to access the API. Email us at api@muzooka.com to request a token.
+[CMW API Access Token](https://docs.google.com/spreadsheets/d/1vtz7ef21Hte16oDuldjJmgWAwL3FvZOAVVS9KZu-5Jg/edit?ts=5aec8c6b#gid=0)
 
 Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
 
