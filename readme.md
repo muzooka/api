@@ -1,8 +1,13 @@
 # Muzooka API
 
+## CMW Hackathon
 [CMW API Access Token](https://docs.google.com/spreadsheets/d/1vtz7ef21Hte16oDuldjJmgWAwL3FvZOAVVS9KZu-5Jg/edit?ts=5aec8c6b#gid=0)
 
 Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
+
+[List of CMW Artists](https://docs.google.com/spreadsheets/u/1/d/1U3sJkpoX0gCQO_nny1yhlbPOf7oemy-SbahgW3BDhUI/edit#gid=43145046)
+
+Please either see Leigh at the Muzooka booth, or post issues here for any problems you run into.
 
 ### Quick Jump To:
 * [Artist Lookup Endpoint](#artist-lookup-endpoint)
