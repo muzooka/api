@@ -45,25 +45,6 @@ Result would contain two top-level fileds: `data` and `pages`. `data` is an arra
             "website": "http://www.PaulMcCartney.com",
             "about": "Page administered by [MPL] ",
             "description": "Paul McCartney's official Facebook page. ",
-            "social": {
-                "twitter": {
-                    "url": "https://twitter.com/PaulMcCartney",
-                    "username": "PaulMcCartney"
-                },
-                "facebook": {
-                    "url": "https://www.facebook.com/PaulMcCartney",
-                    "username": "PaulMcCartney"
-                },
-                "instagram": {},
-                "youtube": {
-                    "url": "https://www.youtube.com/channel/PAULMCCARTNEY",
-                    "channel": "PAULMCCARTNEY"
-                },
-                "iheartradio": {},
-                "bandsintown": {},
-                "mixcloud": {},
-                "soundcloud": {}
-            },
             "socialLinks": [
                 {
                     "type": "twitter",
