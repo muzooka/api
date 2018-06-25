@@ -2,9 +2,15 @@
 
 First contact us to get an authentication token to access the API. Email us at api@muzooka.com to request a token.
 
-Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API
+Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API.
 
-In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting those terms.
+In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting these terms:
+
+- You agree not to cache the JSON response.
+
+- Files (such as images) can only be cached up to 24 hours\*.
+
+<sub><sub>\* If you would like further consideration, please contact us at api@muzooka.com.</sub></sub>
 
 ## Artist Lookup Endpoint
 
