@@ -6,9 +6,9 @@ Once the authentication token is recieved it must be sent in an http header call
 
 In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting these terms:
 
-- You agree not to cache the JSON response.
+- You agree to cache the JSON response for no longer than 24 hours.
 
-- Files (such as images) can only be cached up to 24 hours\*.
+- You agree to store files (such as images) for no longer than 24 hours\*.
 
 <sub><sub>\* If you would like further consideration, please contact us at api@muzooka.com.</sub></sub>
 
