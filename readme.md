@@ -83,7 +83,7 @@ Along with the artist data a `searchScore` is returned, the higher the value the
                 "video": "https://devapi.muzooka.com/v1/artists/PaulMcCartney/videos",
                 "images": "https://devapi.muzooka.com/v1/artists/PaulMcCartney/images",
                 "muzookaUrl": "https://muzooka.com/PaulMcCartney"
-            }
+            },
         "searchScore": 276.66458,
         "isAboveConfidenceThreshold": false
         }
