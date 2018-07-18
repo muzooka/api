@@ -316,7 +316,7 @@ Array of:
 - `id`: Muzooka image Id
 - `type`: The type of image (banner or profile)
 - `source`: Where the image originated
-- `primary`: The primary image for the given type 
+- `isPrimary`: The primary image for the given type 
 - `smallUrl`: A small resize of the original image with aspect ratio preserved
 - `landscape1x1smallUrl`: Landscape crop with 1x1 aspect ratio, 320x320
 - `landscape4x3smallUrl`: Landscape crop with 4x3 aspect ratio, 320x240
@@ -347,7 +347,7 @@ Array of:
     "id": "123",
     "type": "banner",
     "source": "upload",
-    "primary": "true",
+    "isPrimary": "true",
     "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33111/small.jpg",
     "landscape1x1smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33111/landscape1x1smallUrl.jpg",
     "landscape4x3smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33111/landscape4x3smallUrl.jpg",
@@ -375,7 +375,7 @@ Array of:
     "id": "456",
     "type": "profile",
     "source": "facebook",
-    "primary": "true",
+    "isPrimary": "true",
     "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33631/small.jpg",
     "landscape1x1smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33631/landscape1x1smallUrl.jpg",
     "landscape4x3smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33631/landscape4x3smallUrl.jpg",
