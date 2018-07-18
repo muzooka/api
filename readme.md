@@ -1,8 +1,8 @@
 # Muzooka API
 
-First contact us to get an authentication token to access the API. Email us at api@muzooka.com to request a token.
+First contact us to get an api key to access the API. Email us at api@muzooka.com to request an api key.
 
-Once the authentication token is recieved it must be sent in an http header called `X-muzooka-auth-token` for all requests to the API.
+Once the api key is recieved it must be sent in an http header called `X-api-key` for all requests to the API.
 
 In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting these terms:
 
@@ -15,19 +15,16 @@ In order to use the API, you need to accept and comply with [Muzooka Terms of Se
 ## Artist Lookup Endpoint
 
 To lookup an artist, use their name or a portion of it for a fuzzy match. Use following endpoint:
-`GET` `https://api.muzooka.com/artists`
+`GET` `https://devapi.muzooka.com/v1/artists`
 
 Supported query parameters are:
 
-* `name`: Will perform a fuzzy match on the part of the name.
-* `nameStartsWith`: Will look for artists who's name starts with a given term.
-* `nameMatch`: Will perform an exact match on the artist name.
+* `name`: Will perform a search the name.
 * `limit`: Will paginate the result in pages of given size. Maximum page limit is 100, default limit is 25.
 * `offset`: To select certain page of results, set an offset. This will skip given number of records from the top of the list.
 
-Note that ony one name matching parameter can be used at the time. Having a name matching parameter is a requirement to access this endpoint.
-
 Result would contain two top-level fileds: `data` and `pages`. `data` is an array of results, `pages` is the information about pagination.
+Along with the artist data a `searchScore` is returned, the higher the value the more likely the result correlates with the artist name provided. The `isAboveConfidenceThreshold` boolean value simply marks the result as being above a threshold Muzooka has calculated internally. Results are always returned with the highest scoring artists first. In most cases if the first result has a `isAboveConfidenceThreshold` value of `true` then that result is the correct artist for the given artist name.
 
 ### Example Response
 ```json
@@ -83,10 +80,12 @@ Result would contain two top-level fileds: `data` and `pages`. `data` is an arra
                 }
             ],
             "links": {
-                "video": "https://api.muzooka.com/artists/PaulMcCartney/videos",
-                "images": "https://api.muzooka.com/artists/PaulMcCartney/images",
+                "video": "https://devapi.muzooka.com/v1/artists/PaulMcCartney/videos",
+                "images": "https://devapi.muzooka.com/v1/artists/PaulMcCartney/images",
                 "muzookaUrl": "https://muzooka.com/PaulMcCartney"
             }
+        "searchScore": 276.66458,
+        "isAboveConfidenceThreshold": false
         }
     ],
     "pages": {
@@ -99,7 +98,7 @@ Result would contain two top-level fileds: `data` and `pages`. `data` is an arra
 ## Artist Endpoint
 
 The following endpoint returns the artists data
-`GET` `https://api.muzooka.com/artists/:facebookUsername`
+`GET` `https://devapi.muzooka.com/v1/artists/:facebookUsername`
 
 ### Response Structure
 
@@ -190,8 +189,8 @@ The following endpoint returns the artists data
         }
     ],
     "links": {
-        "video": "https://api.muzooka.com/artists/u2/videos",
-        "images": "https://api.muzooka.com/artists/u2/images",
+        "video": "https://devapi.muzooka.com/v1/artists/u2/videos",
+        "images": "https://devapi.muzooka.com/v1/artists/u2/images",
         "muzookaUrl": "https://muzooka.com/u2"
     }
 }
@@ -225,11 +224,11 @@ More types can be added in the future.
 ```js
 const axios = require('axios');
 
-const muzookaAuthToken = 'EXTSyU^BAxK#ukJ$@aS5mj3z';
+const muzookaAPIKey = 'EXTSyU^BAxK#ukJ$@aS5mj3z';
 const config = {
-  baseURL: 'https://api.muzooka.com/',
+  baseURL: 'https://devapi.muzooka.com/v1/',
   headers: {
-    'X-muzooka-auth-token': muzookaAuthToken,
+    'X-api-key': muzookaAPIKey,
   },
 };
 
@@ -246,8 +245,8 @@ The following example uses PHP and the library [Httpful](http://phphttpclient.co
 <?php
 include('./httpful.phar');
 
-$response = \Httpful\Request::get('https://api.muzooka.com/artists/U2')
-    ->addHeader('X-muzooka-auth-token', 'EXTSyU^BAxK#ukJ$@aS5mj3z')
+$response = \Httpful\Request::get('https://devapi.muzooka.com/v1/artists/U2')
+    ->addHeader('X-api-key', 'EXTSyU^BAxK#ukJ$@aS5mj3z')
     ->expectsJson()
     ->send();
 
@@ -259,7 +258,7 @@ echo($response->body->name); //U2
 
 The following endpoint returns the videos for the artist
 
-`GET` `https://api.muzooka.com/artists/:facebookUsername/videos`
+`GET` `https://devapi.muzooka.com/v1/artists/:facebookUsername/videos`
 
 ### Response Structure
 Array of: 
@@ -294,7 +293,7 @@ Array of:
 
 The following endpoint returns the images for the artist
 
-`GET` `https://api.muzooka.com/artists/:facebookUsername/images`
+`GET` `https://devapi.muzooka.com/v1/artists/:facebookUsername/images`
 
 Muzooka API provides multiple variants of every image. There are two variant types: a resize and a crop. Resize has the same aspect ratio as the original image, whereas crops have standard aspect ratios. This applies to all images across the API, not just to this endpoint.
 
@@ -315,6 +314,9 @@ There are 4 standard sizes, along with the original image, that Muzooka API serv
 ### Response Structure
 Array of: 
 - `id`: Muzooka image Id
+- `type`: The type of image (banner or profile)
+- `source`: Where the image originated
+- `isPrimary`: The primary image for the given type 
 - `smallUrl`: A small resize of the original image with aspect ratio preserved
 - `landscape1x1smallUrl`: Landscape crop with 1x1 aspect ratio, 320x320
 - `landscape4x3smallUrl`: Landscape crop with 4x3 aspect ratio, 320x240
@@ -343,6 +345,9 @@ Array of:
 [
   {
     "id": "123",
+    "type": "banner",
+    "source": "upload",
+    "isPrimary": "true",
     "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33111/small.jpg",
     "landscape1x1smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33111/landscape1x1smallUrl.jpg",
     "landscape4x3smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33111/landscape4x3smallUrl.jpg",
@@ -368,6 +373,9 @@ Array of:
   },
   {
     "id": "456",
+    "type": "profile",
+    "source": "facebook",
+    "isPrimary": "true",
     "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33631/small.jpg",
     "landscape1x1smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33631/landscape1x1smallUrl.jpg",
     "landscape4x3smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/33631/landscape4x3smallUrl.jpg",
