@@ -85,7 +85,7 @@ Along with the artist data a `searchScore` is returned, the higher the value the
                 "muzookaUrl": "https://muzooka.com/PaulMcCartney"
             },
         "searchScore": 276.66458,
-        "isAboveConfidenceThreshold": false
+        "isAboveConfidenceThreshold": true
         }
     ],
     "pages": {
