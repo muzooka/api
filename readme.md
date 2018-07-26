@@ -106,7 +106,7 @@ The following endpoint returns the artists data
 * `province`: Province or state the artist resides in
 * `country`: Country the artist resides in
 * `website`: Artist website
-* `bio`: A long bio of the artist
+* `bio`: A long form description about the artist formation, history and accolades.
 * `facebookUsername`: Artist's username on facebook. If artist does not have a username on facebook, artist's numeric facebook ID would be provided.
 * `banner`: Banner image of the artist
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
