@@ -12,6 +12,10 @@ In order to use the API, you need to accept and comply with [Muzooka Terms of Se
 
 <sub><sub>\* If you would like further consideration, please contact us at api@muzooka.com.</sub></sub>
 
+## Webhooks
+
+You can integrate your server with Muzooka by utilizing webhooks. Read more in a dedicated [webhook integration guide](webhooks.md).
+
 ## Artist Lookup Endpoint
 
 To lookup an artist, use their name or a portion of it for a fuzzy match. Use following endpoint:
