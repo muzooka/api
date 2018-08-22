@@ -1,6 +1,6 @@
 # Muzooka API
 
-First contact us to get an api key to access the API. Email us at api@muzooka.com to request an api key.
+First visit [Muzooka Developer Page](https://www.muzooka.com/m/developers) to get an API key to access the API.
 
 Once the api key is recieved it must be sent in an http header called `X-api-key` for all requests to the API.
 
