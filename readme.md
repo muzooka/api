@@ -87,8 +87,7 @@ Along with the artist data a `searchScore` is returned, the higher the value the
     "province": "County Dublin",
     "country": " Ireland",
     "website": "http://www.u2.com/",
-    "bio": "Taking the new album Songs of Experience on the #U2eiTour across North America & Europe in 2018. Tickets on sale now. http://www.u2.com/news/title/experience--innocence-tour-heading-to-europe\n\n",
-    "description": "U2's 14th studio album Songs of Experience is out now on CD, vinyl, digital download & across streaming platforms.  eXPERIENCE + iNNOCENCE US Tour opens May.  http://www.u2.com",
+    "bio": "U2 are an Irish rock band from Dublin formed in 1976. The group consists of Bono (lead vocals and rhythm guitar), the Edge (lead guitar, keyboards, and backing vocals), Adam Clayton (bass guitar), and Larry Mullen Jr. (drums and percussion).",
     "socialLinks": [
         {
             "type": "twitter",
@@ -151,8 +150,7 @@ The following endpoint returns the artists data
 * `province`: Province or state the artist resides in
 * `country`: Country the artist resides in
 * `website`: Artist website
-* `bio`: A short biographical summary about the artist
-* `description`: A long description of the artist
+* `bio`: A biographical summary about the artist
 * `facebookUsername`: Artist's username on facebook. If artist does not have a username on facebook, artist's numeric facebook ID would be provided.
 * `banner`: Banner image of the artist
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
@@ -173,8 +171,7 @@ The following endpoint returns the artists data
     "province": null,
     "country": " Ireland",
     "website": "http://www.u2.com/",
-    "bio": "'Songs of Experience' released Dec 1, pre-order now and listen to new song Get Out Of Your Own Way. eXPERIENCE + iNNOCENCE US Tour opens May.  http://www.u2.com\n\n",
-    "description": "'Songs of Experience' released Dec 1, pre-order now and listen to new song Get Out Of Your Own Way. eXPERIENCE + iNNOCENCE US Tour opens May.  http://www.u2.com",
+    "bio": "U2 are an Irish rock band from Dublin formed in 1976. The group consists of Bono (lead vocals and rhythm guitar), the Edge (lead guitar, keyboards, and backing vocals), Adam Clayton (bass guitar), and Larry Mullen Jr. (drums and percussion).",
     "banner": {
         "smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/small.jpg",
         "landscape1x1smallUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/landscape/1x1/small.jpg",
@@ -197,7 +194,7 @@ The following endpoint returns the artists data
         "landscape21x9largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/landscape/21x9/large.jpg",
         "portrait4x3largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/portrait/4x3/large.jpg",
         "portrait16x9largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/portrait/16x9/large.jpg",
-        "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/original.jpg",
+        "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/original.jpg"
     },
     "facebookUsername": "u2",
     "socialLinks": [
