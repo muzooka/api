@@ -162,8 +162,9 @@ The following endpoint returns the artists data
 * `bio`: A biographical summary about the artist
 * `facebookUsername`: Artist's username on facebook. If artist does not have a username on facebook, artist's numeric facebook ID would be provided.
 * `banner`: Banner image of the artist
+* `profile`: Profile image of the artist
 * `socialLinks`: An array of social media links, only existing social links for the given artist will be included
-* - `type`: Type of social media link (ex Twitter)
+* - `type`: Type of social media link (for example, `twitter`)
 * - `id`: Social media id, username or profile
 * - `url`: Direct link to social media account
 * `links`: Collection of endpoints
@@ -204,6 +205,30 @@ The following endpoint returns the artists data
         "portrait4x3largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/portrait/4x3/large.jpg",
         "portrait16x9largeUrl": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/portrait/16x9/large.jpg",
         "original": "https://d1vuu6jk2dpw02.cloudfront.net/images/40841/original.jpg"
+    },
+    "profile": {
+        "smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/small.jpg",
+        "landscape1x1smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/1x1/small.jpg",
+        "landscape4x3smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/4x3/small.jpg",
+        "portrait4x3smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/portrait/4x3/small.jpg",
+        "landscape16x9smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/16x9/small.jpg",
+        "portrait16x9smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/portrait/16x9/small.jpg",
+        "landscape21x9smallUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/21x9/small.jpg",
+        "mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/medium.jpg",
+        "landscape1x1mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/1x1/medium.jpg",
+        "landscape4x3mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/4x3/medium.jpg",
+        "portrait4x3mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/portrait/4x3/medium.jpg",
+        "landscape16x9mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/16x9/medium.jpg",
+        "portrait16x9mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/portrait/16x9/medium.jpg",
+        "landscape21x9mediumUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/21x9/medium.jpg",
+        "largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/large.jpg",
+        "landscape1x1largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/1x1/large.jpg",
+        "landscape4x3largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/4x3/large.jpg",
+        "portrait4x3largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/portrait/4x3/large.jpg",
+        "landscape16x9largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/16x9/large.jpg",
+        "portrait16x9largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/portrait/16x9/large.jpg",
+        "landscape21x9largeUrl": "https://d53lufxrpjz6n.cloudfront.net/images/34653/landscape/21x9/large.jpg",
+        "original": "https://d53lufxrpjz6n.cloudfront.net/images/34653/original.jpg"
     },
     "facebookUsername": "u2",
     "socialLinks": [
