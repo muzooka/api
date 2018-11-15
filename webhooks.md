@@ -20,7 +20,7 @@ Your usage plan has limits for number of installations. Having multiple endpoint
 
 To install a webhook you need to make a POST request to Muzooka server with parameters of your subscription.
 
-As with the rest of the Muzooka API, you need an active API token to make requests. You can request one in [Muzooka Developer section](https://www.muzooka.com/m/developers) if you don't have one already.
+As with the rest of the Muzooka API, you need an active API token to make requests. You can request one in [Muzooka Developer section](https://app.muzooka.com/m/developers) if you don't have one already.
 
 To install a new webhook, you need to send a POST request to https://devapi.muzooka.com/v1/webhooks with JSON-formatted request body containing parameters "type", "filter" and "url".
 
