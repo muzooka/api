@@ -2,18 +2,18 @@
 
 ## How To Request An API Key
 
-1. Login to [Muzooka](https://www.muzooka.com/m/login).
+1. Login to [Muzooka](https://app.muzooka.com/m/login).
 2. Verify your Facebook account and permissions, you will be directed to the Page Manager.
-3. On the left navigation, click [Developer](https://www.muzooka.com/m/developers).
+3. On the left navigation, click [Developer](https://app.muzooka.com/m/developers).
 4. In the top right, click the blue `Request API Key` button.
-5. Once approved you will receive an email from Muzooka, [login](https://www.muzooka.com/m/login) and return to the [Developer](https://www.muzooka.com/m/developers) section.
+5. Once approved you will receive an email from Muzooka, [login](https://app.muzooka.com/m/login) and return to the [Developer](https://app.muzooka.com/m/developers) section.
 6. To attain your key, click on `Click to reveal key`.
 
 ## API Usage & Terms of Service
 
 The key must be sent in an http header called `X-api-key` for all requests to the API.
 
-In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting these terms:
+In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://app.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting these terms:
 
 - You agree to cache the JSON response for no longer than 24 hours.
 
