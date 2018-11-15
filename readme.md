@@ -142,7 +142,7 @@ Along with the artist data a `searchScore` is returned, the higher the value the
     "links": {
         "video": "https://devapi.muzooka.com/v1/artists/u2/videos",
         "images": "https://devapi.muzooka.com/v1/artists/u2/images",
-        "muzookaUrl": "https://api.muzooka.com/u2"
+        "muzookaUrl": "https://app.muzooka.com/u2"
     }
 }
 ```
