@@ -266,7 +266,7 @@ The following endpoint returns the artists data
     "links": {
         "video": "https://devapi.muzooka.com/v1/artists/u2/videos",
         "images": "https://devapi.muzooka.com/v1/artists/u2/images",
-        "muzookaUrl": "https://muzooka.com/u2"
+        "muzookaUrl": "https://app.muzooka.com/u2"
     }
 }
 ```
