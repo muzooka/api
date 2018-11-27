@@ -22,7 +22,7 @@ To install a webhook you need to make a POST request to Muzooka server with para
 
 As with the rest of the Muzooka API, you need an active API token to make requests. You can request one in [Muzooka Developer section](https://app.muzooka.com/m/developers) if you don't have one already.
 
-To install a new webhook, you need to send a POST request to https://devapi.muzooka.com/v1/webhooks with JSON-formatted request body containing parameters "type", "filter" and "url".
+To install a new webhook, you need to send a POST request to https://devapi.muzooka.com/v2/webhooks with JSON-formatted request body containing parameters "type", "filter" and "url".
 
 Webhook is defined by it's `type` and `filter` parameters.
 
@@ -38,7 +38,7 @@ To authenticate with Muzooka API, provide your token with `X-api-key` HTTP heade
 Example with cURL:
 
 ```
-curl -X POST https://devapi.muzooka.com/v1/webhooks \
+curl -X POST https://devapi.muzooka.com/v2/webhooks \
   -H 'Content-Type: application/json' \
   -H 'X-api-key: REPLACE_THIS_WITH_YOUR_API_KEY' \
   -d '{
@@ -63,14 +63,14 @@ Currently, webhooks do not expire, but do count the number of failed requests. I
 
 Uninstalling a webhook is necessary to keep your webhook count below the usage limit. You may want to unsubscribe from changes that do not need real time updates anymore (remember you can always request same data from REST endpoints) to allow new subscriptions for other objects in Muzooka to be created.
 
-To uninstall a webhook, send JSON-formatted HTTP DELETE request to `https://devapi-qc.muzooka.com/v1/webhooks/:Webhookid` where `:Webhookid` is the UUID of the webhook in question.
+To uninstall a webhook, send JSON-formatted HTTP DELETE request to `https://devapi-qc.muzooka.com/v2/webhooks/:Webhookid` where `:Webhookid` is the UUID of the webhook in question.
 
 Here is a cURL example:
 ```
-curl -X DELETE https://devapi.muzooka.com/v1/webhooks/cdse9sa2-4fa4-65d9-85e2-501064efdb00 \
+curl -X DELETE https://devapi.muzooka.com/v2/webhooks/cdse9sa2-4fa4-65d9-85e2-501064efdb00 \
   -H 'x-api-key: REPLACE_THIS_WITH_YOUR_API_KEY'
 ```
-  
+
 Response structure is in JSON.
 Success result has HTTP status 200 and body `{"message":"ok"}`.
 Error result has HTTP status other than 200 and body similar to `{"message":"error description goes here"}`.
