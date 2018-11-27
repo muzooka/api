@@ -25,6 +25,7 @@ In order to use the API, you need to accept and comply with [Muzooka Terms of Se
 For the most current version of our API please view the [V2 Documentation](v2.md)
 
 For the previous version of out API please view the [V1 Documentation](v1.md)
+
 :warning::warning:
 Our V1 API is deprecated and will be shut off 2019-01-31
 :warning::warning:
