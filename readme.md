@@ -24,7 +24,7 @@ In order to use the API, you need to accept and comply with [Muzooka Terms of Se
 ## Restful API
 For the most current version of our API please view the [V2 Documentation](v2.md)
 
-For the previous version of out API please view the [V1 Documentation](v1.md) Please not that V1 is deprecated and will be turned off 2019-01-31.
+For the previous version of out API please view the [V1 Documentation](v1.md) Please note that V1 is deprecated and will be turned off 2019-01-31.
 
 ## Webhooks
 You can integrate your server with Muzooka by utilizing webhooks. Read more in a dedicated [webhook integration guide](webhooks.md).
