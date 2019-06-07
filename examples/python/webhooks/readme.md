@@ -8,7 +8,7 @@ been implemented so you can verify that the webhook came from Muzooka.
 This example was written in Python 3, it may work with Python 2, but it has not been tested.
 
 
-##Setting Up
+## Setting Up
 - Create an account for [ngrok](https://ngrok.com/) and install the binary on your system
 - Either clone this repository, or copy `server.py` and `requirements.txt` to your local machine
 - Install the requirements using `pip install -r requirements.txt`, we suggest you use
@@ -19,7 +19,7 @@ This example was written in Python 3, it may work with Python 2, but it has not 
   `FLASK_APP=server.py MUZOOKA_API_KEY=xxx NGROK_URL=https://xxx.ngrok.io flask run`
 
 
-##Testing
+## Testing
 - Create a new webhook by POSTing to `localhost:5000/webhooks` with a JSON body similar to the
   following, replacing {{muzookId}} with the page you want to follow (should be a page that you can
   make changes to):
