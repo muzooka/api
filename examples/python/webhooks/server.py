@@ -85,8 +85,6 @@ def webhooks_listen():
     print('Webhook signature: {}'.format(signature))
     print('Calculated signature: {}'.format(calculated_signature))
 
-    print(artist)
-
     if signature == calculated_signature:
         print('Signatures match, content came from Muzooka')
         # This is where you would update your local store for the given artist
