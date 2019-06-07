@@ -21,7 +21,7 @@ This example was written in Python 3, it may work with Python 2, but it has not 
 
 ## Testing
 - Create a new webhook by POSTing to `localhost:5000/webhooks` with a JSON body similar to the
-  following, replacing {{muzookId}} with the page you want to follow (should be a page that you can
+  following, replacing `{{muzookId}}` with the page you want to follow (should be a page that you can
   make changes to):
   ```json
   {
