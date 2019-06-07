@@ -7,7 +7,7 @@ import hmac
 from flask import Flask, request
 
 MUZOOKA_API_KEY = os.environ.get('MUZOOKA_API_KEY')
-MUZOOKA_API_URL = 'https://devapi-qc.muzooka.com/v2'
+MUZOOKA_API_URL = 'https://devapi.muzooka.com/v2'
 NGROK_URL = os.environ.get('NGROK_URL')
 MUZOOKA_AUTH_HEADERS = {
     'x-api-key': MUZOOKA_API_KEY,
