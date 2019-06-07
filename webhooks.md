@@ -75,6 +75,20 @@ Response structure is in JSON.
 Success result has HTTP status 200 and body `{"message":"ok"}`.
 Error result has HTTP status other than 200 and body similar to `{"message":"error description goes here"}`.
 
+## Verifying a webhook
+
+Whenever you receive a webhook you should verify that the message actually came from Muzooka. Every webhook that Muzooka POSTs includes a `X-Signature` header with the SHA1 signature of the request body. The signature is calculated using HMAC where the key is your API key. The signature is prepended with `sha1=`.
+
+Here is an example of how you would calculate the HMAC signature in node.
+```javascript
+const crypto = require('crypto');
+
+const calculateSignature(key, payload) {
+  const signature = crypto.createHmac('sha1', key).update(payload).digest('hex');
+  return `sha1=${signature}`;
+};
+```
+
 ## Good practices
 
 - Respond as quickly as possible. Muzooka server will wait for HTTP status 200 from your server for 3 seconds before declaring webhook call a failed attempt, so it makes sense to design your app in a way where it would respond to Muzooka call right away before handling any business logic (i.e. updating caches, etc).
