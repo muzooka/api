@@ -31,7 +31,7 @@ Webhook is defined by it's `type` and `filter` parameters.
 
 More types may be added in future.
 
-`filter` if the filtering pattern that is applied when any object of specified `type` was changed to determine if your URL should be notified. For type `page` it is page's Facebook username. Example: when you specify `type: page` and `filter: u2`, your URL will get notifications every time U2's Muzooka page will be changed.
+`filter` if the filtering pattern that is applied when any object of specified `type` was changed to determine if your URL should be notified. For type `page` it is page's id. Example: when you specify `type: page` and `filter: 5678046685`, your URL will get notifications every time U2's Muzooka page will be changed.
 
 To authenticate with Muzooka API, provide your token with `X-api-key` HTTP header.
 
@@ -43,7 +43,7 @@ curl -X POST https://devapi.muzooka.com/v2/webhooks \
   -H 'X-api-key: REPLACE_THIS_WITH_YOUR_API_KEY' \
   -d '{
     "type": "page",
-    "filter": "u2",
+    "filter": "5678046685",
     "url": "https://webhook.site/0ea7ede9-f354-5f32-9230-9ac2a54e45c5"
 }'
 ```
