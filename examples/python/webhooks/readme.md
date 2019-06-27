@@ -13,10 +13,15 @@ This example was written in Python 3, it may work with Python 2, but it has not 
 - Either clone this repository, or copy `server.py` and `requirements.txt` to your local machine
 - Install the requirements using `pip install -r requirements.txt`, we suggest you use
   [Virtualenv](https://virtualenv.pypa.io/) to isolate your environment
-- In one terminal, start ngrok: `./ngrok http 5000`
+- In one terminal, start ngrok: 
+  ```bash
+  ./ngrok http 5000
+  ```
 - Note the `Forwarding` http address (it will look something like `https://xxx.ngrok.io`
 - In another terminal, start the flask server:
-  `FLASK_APP=server.py MUZOOKA_API_KEY=xxx NGROK_URL=https://xxx.ngrok.io flask run`
+  ```bash
+  FLASK_APP=server.py MUZOOKA_API_KEY=xxx NGROK_URL=https://xxx.ngrok.io flask run
+  ```
 
 
 ## Testing
