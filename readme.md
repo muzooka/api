@@ -13,7 +13,7 @@
 
 The key must be sent in an http header called `X-api-key` for all requests to the API.
 
-In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://app.muzooka.com/m/legal). Making requests to the API is considered as an act of accepting these terms:
+In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/legal). Making requests to the API is considered as an act of accepting these terms:
 
 - You agree to cache the JSON response for no longer than 24 hours.
 
