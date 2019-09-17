@@ -4,8 +4,8 @@
 
 1. Login to [Muzooka](https://app.muzooka.com/m/login).
 2. Verify your Facebook account and permissions, you will be directed to the Profile Manager.
-3. In the top right, click on your avatar and then [API Keys](https://app.muzooka.com/m/developers).
-4. In the top right, click the blue `Request API Key` button.
+3. Click on your avatar and then [API Keys](https://app.muzooka.com/m/developers).
+4. Click the blue `Request API Key` button.
 5. Once approved you will receive an email from Muzooka, [login](https://app.muzooka.com/m/login) and return to the [Developer](https://app.muzooka.com/m/developers) section.
 6. To attain your key, click on `Click to reveal key`.
 
