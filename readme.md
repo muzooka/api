@@ -11,18 +11,17 @@
 
 ## API Usage & Terms of Service
 
-The key must be sent in an http header called `X-api-key` for all requests to the API.
+Using the Muzooka API indicates that you accept and will comply with the [Muzooka Terms of Service](https://www.muzooka.com/legal) (see section 12 for API Usage Terms). 
 
-In order to use the API, you need to accept and comply with [Muzooka Terms of Service](https://www.muzooka.com/legal). Making requests to the API is considered as an act of accepting these terms:
+Your API key must be sent in an http header called `X-api-key` for all requests to the API.
 
-- You agree to cache the JSON response for no longer than 24 hours.
+To ensure that you always have the most up-to-date artist assets, we strongly recommend integrating the Muzooka API using webhooks. That way, you cache artist assets on your system until you receive a webhook notification from our system letting you know a profile was updated on Muzooka.
 
-- You agree to store files (such as images) for no longer than 24 hours\*.
+Read more in our [webhook integration guide](webhooks.md).
 
-<sub><sub>\* If you would like further consideration or questions, please contact us at api@muzooka.com.</sub></sub>
+If you integrate the Muzooka API without using webhooks, you are required to check our system every 24 hours for updates to ensure that the artist assets on your system are always current.
+
+<sub>\* For questions, please contact us at api@muzooka.com.</sub>
 
 ## Restful API
 For the most current version of our API please view the [v2 documentation](v2.md)
-
-## Webhooks
-You can integrate your server with Muzooka by utilizing webhooks. Read more in a dedicated [webhook integration guide](webhooks.md).
