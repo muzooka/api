@@ -17,11 +17,11 @@ Your API key must be sent in an http header called `X-api-key` for all requests 
 
 To ensure that you always have the most up-to-date artist assets, we strongly recommend integrating the Muzooka API using webhooks. That way, you cache artist assets on your system until you receive a webhook notification from our system letting you know a profile was updated on Muzooka.
 
-Read more in our [webhook integration guide](webhooks.md).
+Read more in our [webhook integration guide](https://www.muzooka.com/developer#tag/Webhooks).
 
 If you integrate the Muzooka API without using webhooks, you are required to check our system every 24 hours for updates to ensure that the artist assets on your system are always current.
 
 <sub>\* For questions, please contact us at api@muzooka.com.</sub>
 
 ## Restful API
-For the most current version of our API please view the [v2 documentation](v2.md)
+For the most current version of our API please view the [v3 documentation](https://muzooka.com/developer)
