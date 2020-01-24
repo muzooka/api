@@ -1,5 +1,7 @@
 # Webhook Integration Guide
 
+***This guide describes v2 of Muzooka API which is NOT the latest version and is NOT recommended for new integrations. Please use [Muzooka Developer API v3 documentation](https://www.muzooka.com/developer), [webhook guide section](https://www.muzooka.com/developer#tag/Webhooks) for the latest version of Muzooka API)***
+
 Webhooks allow you to subscribe to changes in Muzooka database and receive notifications about changes as soon as they occur without having to poll for changes through the REST endpoints.
 
 Whenever a change happens on one of the entities your server is subscribed to, Muzooka is going to deliver a HTTP POST to your server with updated data, just as if you would be requesting it through a REST endpoint request.
